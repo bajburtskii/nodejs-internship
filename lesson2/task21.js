@@ -12,4 +12,4 @@
  *    45°F is 7.222222222222222°C.
  */
 
-// example solution 2
+// example solution 3
