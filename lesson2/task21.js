@@ -25,7 +25,8 @@ function celsius_to_fahrenheit(temperature, initialScale) {
         case "c":
             return (temperature - 32) * (5 / 9)
         case "f":
-            return temperature * 9 / 5 + 32
+            console.log(temperature * 9 / 5 + 32)
+            return null
         default:
             console.error("Error occurred during processing temperatures")
             return null
