@@ -10,5 +10,10 @@
  * @return {boolean}
  */
 const isPalindrome = function(s) {
-
+  const scrapedString = s.toLowerCase().replace(/[^a-z0-9]/g, '') // Get rid of needless elements for comparison
+  return scrapedString === [...scrapedString].reverse().join('')
 };
+
+console.log(isPalindrome('Hello World')) // false
+console.log(isPalindrome('12wow21')) // true  
+console.log(isPalindrome('1&2w^ow_%21#')) // true
