@@ -11,7 +11,8 @@
  */
 const isPalindrome = function(s) {
   const scrapedString = s.toLowerCase().replace(/[^a-z0-9]/g, '') // Get rid of needless elements for comparison
-  return scrapedString === [...scrapedString].reverse().join('')
+  const reversedString = [...scrapedString].reverse().join('')
+  return scrapedString === reversedString
 };
 
 console.log(isPalindrome('Hello World')) // false
