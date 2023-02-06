@@ -19,5 +19,17 @@
  * @return {string}
  */
 const longestCommonPrefix = function(strs) {
-
+  let pref = strs.sort((a ,b) => { return a.length - b.length })[0] // Shortest word can be prefix
+  for (let word of strs) {
+    while (pref.length >= 1) {
+      if (!word.startsWith(pref)) {
+        pref = pref.slice(0, -1)
+      } else {
+        break
+      }
+    }
+  }
+  return pref
 };
+
+console.log(longestCommonPrefix(["flower","flow", "flight"]))
