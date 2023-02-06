@@ -20,7 +20,7 @@
  */
 const longestCommonPrefix = function (strs) {
     if (strs.length <= 0) {
-        console.error("strs.length < 0");
+        console.error("Error: strs.length < 0");
         return null;
     }
 
@@ -44,7 +44,7 @@ const longestCommonPrefix = function (strs) {
 
 
     // printing result
-    console.log(strs.toString() + "\t=>\t" + "Longest common prefix: " + prefix)
+    console.log(`${strs.toString()} \t=>\t Longest common prefix: ${prefix}`);
 
 };
 
@@ -58,7 +58,7 @@ function compare(string, prefix) {
     return prefix;
 }
 
-longestCommonPrefix(["test", "te2st", "testdfdfsf"])
+longestCommonPrefix(["test", "te2st", "testdfdfsf"])                    // Output: te
 longestCommonPrefix(["abc", "abcdfdfd", "sfdgfsg", "gdgfdgdf"])
 longestCommonPrefix(["flower", "flow", "flight"])
 longestCommonPrefix([])

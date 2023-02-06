@@ -12,13 +12,19 @@
 const isPalindrome = function(s) {
     // g - special flag that indicates Global search
     s = s.replace(/[0-9]/g, '').toLowerCase();
-    console.log(s.split(""))
-    // "abc".split("") - output: ["a", "b", "c"]
-    return s.split("").reverse().toString() === s.split("").toString();
+    if (s.length === 0) {
+        console.error("Error: s.length === 0");
+        return false;
+    }
+    let str_array =  s.split("");
+    return str_array.reverse().toString() === str_array.toString();
 };
 
 function tests() {
-    console.log(isPalindrome("2423432b"));
+    console.log(isPalindrome("2423432b"));          // Output: true
+    console.log(isPalindrome("abbbbbba"));          // Output: true
+    console.log(isPalindrome("abbcbbbbba"));        // Output: false
+    console.log(isPalindrome("6356354643"));        // Output: true
 }
 
 tests();
