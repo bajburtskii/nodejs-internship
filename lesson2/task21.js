@@ -1,13 +1,31 @@
 /**
- * Write a JavaScript program to convert temperatures to and from celsius, fahrenheit.
- *
- * C = (5/9) * (F - 32)
- *
- * The results from C to F have to be available in Global Scope, and results from F to C have to be available only in a local scope.
- *
- * Please support your code with detailed comments answering the question `Why`, rather than `What`.
- *
- * Sample Output:
- *    60°C is 140 °F.
- *    45°F is 7.222222222222222°C.
+ * @param {number} value
+ * @param {string} resUnits
+ * @return {number}
  */
+
+
+function convertTemp(value, resUnits){
+    let result = 0;                                 // this variable will contain the result of calculations
+    switch (resUnits) {
+        case 'F':
+            result = value / (5 / 9) + 32;          // counting degrees fahrenheit from celcius
+            console.log(`${value}°C is ${result}°F`);
+            return result;
+
+        case 'C':
+            result = (5 / 9) * (value - 32);        // counting degrees celcius from fahrenheit
+            console.log(`${value}°F is ${result}°C`);
+            break;
+    
+        default:
+            console.log('These units of measure are not supported yet!'); // if an error will occur
+            break;
+    }    
+}
+
+let degrees;
+degrees = convertTemp(60, 'F');         // trying to get a value from function
+console.log(degrees);                   // Output: 140
+degrees = convertTemp(45, 'C');         // trying to get a value from function
+console.log(degrees);                   // Output: undefined
