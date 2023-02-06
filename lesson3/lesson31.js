@@ -10,5 +10,15 @@
  * @return {boolean}
  */
 const isPalindrome = function(s) {
-
+    let res = false;
+    const compareStr = s.trim().replace(/\W/g, '').toLowerCase();
+    let i = 0;
+    while (i <= compareStr.length - i - 1) {
+        res = compareStr[i] === compareStr[compareStr.length - i - 1];
+        i++;
+    }
+    return res;
 };
+
+console.log(isPalindrome('   ab$$  %%CbA   ')); // Output: true
+console.log(isPalindrome('abCbAc'));            // Output: false
