@@ -1,7 +1,8 @@
-/* Converting from degrees Celsius to Fahrenheit is degrees */
-let gradC = 60;
-let gradF = ((gradC * 9 / 5) + 32);
-console.log("Converting from 60 degrees Celsius to Fahrenheit is " + gradF + " degrees");
+{/* Converting from degrees Celsius to Fahrenheit is degrees */
+    let gradC = 60;
+    let gradF = ((gradC * 9 / 5) + 32);
+    console.log("Converting from 60 degrees Celsius to Fahrenheit is " + gradF + " degrees");
+}
 {
     /*
     The conversion from degrees Fahrenheit to Сelsius is degrees
