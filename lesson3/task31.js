@@ -38,7 +38,6 @@ const isPalindromeLoop = function(s) {
   return result
 }
 
-
 // console.log(isPalindrome('Hello World')) //false
 // console.log(isPalindrome('12wow21')) // true
 // console.log(isPalindrome('1&2w^ow_%21#')) //true
@@ -48,6 +47,5 @@ console.log(isPalindromeLoop('12wow21'))  // true
 console.log(isPalindromeLoop('1&2w^ow_%21#')) // true
 console.log(isPalindromeLoop('r ac a r')) // true
 console.log(isPalindromeLoop('race a car')) //false
-
 
 
