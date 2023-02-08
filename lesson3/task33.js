@@ -23,6 +23,7 @@
  * @param {string} t
  * @return {boolean}
  */
+
 const isIsomorphic = function(s, t) {
 
 };
