@@ -19,7 +19,7 @@
  * @return {string}
  */
 const longestCommonPrefix = function(strs) {
-  let pref = []
+  let pref = ''
   if (Array.isArray(strs) && strs.length >= 1) {
     pref = strs.sort((a, b) => a.length - b.length)[0] // Shortest word can be prefix
       for (let word of strs) {
