@@ -1,6 +1,6 @@
 let a = "ert43";
 let s = "re4tt7er";
-let b = "race a ecar"
+let b = "race a car"
 console.log(b + "\n");
 let regex0 = / /ig;
 b = b.replace(regex0,"")
