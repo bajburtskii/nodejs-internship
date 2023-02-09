@@ -1,14 +1,17 @@
-c(60) //Passing an Argument to a Function
-f(45) //Passing an Argument to a Function
-function c(celsious)
+let celsiusGlobal = 60;
+let fahrenheitGlobal = 145;
+
+celsiusConversion(celsiusGlobal)
+fahrenheitConversion(fahrenheitGlobal)
+function celsiusConversion(celsius)
 {
-    let cToFar = celsious * 9 / 5 + 32 //Farengeyt calculating
+    let cToFar = celsius * 9 / 5 + 32 //Fahrenheit calculating
     let result =  cToFar
-    console.log(celsious + "°C is " + result + "°F" )
+    console.log(celsius + "°C is " + result + "°F" )
 }
-function f(farengeyt)
+function fahrenheitConversion(fahrenheit)
 {
-    let fToCel = (farengeyt - 32) * 5 / 9 //Celsious calculating
+    let fToCel = (fahrenheit - 32) * 5 / 9 //Celsius calculating
     let result =  fToCel
-    console.log(farengeyt + "°F is " + result + "°C" )
+    console.log(fahrenheit + "°F is " + result + "°C" )
 }
