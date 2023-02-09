@@ -23,18 +23,18 @@ console.log(isPalindrome('A man, a plan, a canal. Panama;')); // Output: true  *
 
 
 const isPalindrome = function(s) {
-    let str = s.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ""), //Remove all special chars except spaces
-        start = 0,
+    let str = s.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, ""), // Remove all special chars except spaces
+        start = 0, 
         end =  str.length - 1;
 
     while (start < end) {
-        if (str.charAt(start) === ' ') {
+        if (str.charAt(start) === ' ') { // If 'start' index is equal to space instead of a letter the index is incremented to step over
             start++;
-            continue;
+            continue; // To start the loop with new value of 'start' index
         }
-        if (str.charAt(end) === ' ') {
+        if (str.charAt(end) === ' ') { // If 'end' index is equal to space instead of a letter the index is decrease to step over
             end--;
-            continue;
+            continue; // To start the loop with new value of 'end' index
         }
 
         if (str.charAt(start) !== str.charAt(end)) {
