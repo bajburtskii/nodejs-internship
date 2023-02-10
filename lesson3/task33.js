@@ -45,59 +45,11 @@ const isFirstOccurence = function (word, index) {
   return !word.slice(0, index).includes(word[index])
 }
 
-// console.log(isIsomorphic('paper', 'title'))
-// console.log(isIsomorphic('add', 'egg'))
+console.log(isIsomorphic('paper', 'title'))
+console.log(isIsomorphic('add', 'egg'))
 console.log(isIsomorphic('ttoll', 'crall'))
-// console.log(isIsomorphic('rrppprggtt', 'eeoooeuuii'))
+console.log(isIsomorphic('rrppprggtt', 'eeoooeuuii'))
+console.log(isIsomorphic('rorppejgg', 'gegooegtt'))
+console.log(isIsomorphic("SEE", "SAW"))
 
-
-// console.log(isIsomorphic('rorppejgg', 'gegooegtt'))
-// console.log(isIsomorphic("SEE", "SAW"))
-
-
-// Another solutions
-
-// const isomorph = (a, b)=> {
-//   const check = (string)=> {
-//     let hash = {};
-//     for (let i = 1; i < a.length; i++)
-//       if (!hash[string[i]]) 
-//         hash[string[i]] = i
-//     return string.split('').map(lett=> hash[lett]).join``
-//   }
-//   return check(a) === check(b)
-// }
-
-
-// function isomorph(a, b) {
-//   let oneway = (x, y) => {
-//     let obj = {}
-//     for (let i = 0; i < x.length; ++i) {
-//       if (obj[x[i]] && obj[x[i]] != y[i]) return false
-//       if (!obj[x[i]]) obj[x[i]] = y[i]
-//     }
-//     return true
-//   }
-//   return oneway(a, b) && oneway(b, a)
-// }
-
-// function isomorph(a, b) {
-//   if( a.length !== b.length ) return false
-  
-//   function checkUniqueMapping(word1, word2) {
-//     let words = {}
-//     return word1.split('').map( (letter, i) => {
-//         if ( !(letter in words) ) {
-//           words[letter] = word2.charAt(i)
-//           return true
-//         }
-//       else if( letter in words && words[letter] == word2.charAt(i)) return true
-//       else return false
-//     })
-//   }
-
-//   if(checkUniqueMapping(a, b).indexOf(false)>-1) return false
-//   if(checkUniqueMapping(b, a).indexOf(false)>-1) return false
-//   else return true
-// }
 
