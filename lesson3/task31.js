@@ -10,14 +10,12 @@
  * @return {boolean}
  */
 const isPalindrome = function(s) {
-    // g - special flag that indicates Global search
-    s = s.replace(/[0-9]/g, '').toLowerCase();
-    if (s.length === 0) {
-        console.error("Error: s.length === 0");
-        return false;
+    s = s.replace(" ", "");
+    for (let index = 0; index < Math.floor(s.length) / 2; index++){
+        if (s[index] !== s[s.length - index - 1])
+            return false;
     }
-    let str_array =  s.split("");
-    return str_array.reverse().toString() === str_array.toString();
+    return true;
 };
 
 function tests() {
