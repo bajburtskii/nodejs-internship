@@ -1,21 +1,10 @@
-let a = "ert43";
+let a = "ert43 er ertertdfg dfer";
 let s = "re4tt7er";
 let b = "race a car"
-console.log(b + "\n");
-let regex0 = / /ig;
-b = b.replace(regex0,"")
-let regex = /4/ig;
-s = s.replace(regex,"");
-let regex1 = /7/ig;
-s = s.replace(regex1,"");
-let regex2 = /4/ig;
-a = a.replace(regex2,"");
-let regex3 = /3/ig;
-a = a.replace(regex3,"");
-let regex4 = /5/ig;
-a = a.replace(regex4,"");
-let regex5 = /6/ig;
-a = a.replace(regex5,"");
+a = a.replace(/[^a-z]/ig, "");
+s = s.replace(/[^a-z]/ig, "");
+b = b.replace(/[^a-z]/ig, "");
+
 console.log("s = " + s);
 console.log("a = " + a);
 console.log("b = " + b);
