@@ -46,7 +46,7 @@ const isValid = function(s) {
                 s.charAt(i) === ']' && leftCharsStack.slice(-1)[0] !== '[') {
                 return false;
             }
-            // Otherwise we removing the last opening bracket/parentheses in the stack to focus on the next opening bracket/parentheses to match
+            // Otherwise we remove the last opening bracket/parentheses in the stack to focus on the next opening bracket/parentheses to match
             leftCharsStack.pop();
         }
     }
