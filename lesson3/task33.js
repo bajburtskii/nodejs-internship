@@ -40,3 +40,4 @@ const isIsomorphic = function(s, t) {
 console.log(isIsomorphic('egg', 'add')); // Output: true
 console.log(isIsomorphic('foo', 'bar')); // Output: false
 console.log(isIsomorphic('paper', 'title')); // Output: true
+console.log(isIsomorphic('p3aper', 'title')); // Output: false
