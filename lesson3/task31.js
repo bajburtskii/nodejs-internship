@@ -8,6 +8,4 @@
  * @param {string} s
  * @return {boolean}
  */
-const isPalindrome = function(s) {
-
-};
+const isPalindrome = function(s) {};
