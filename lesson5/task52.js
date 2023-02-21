@@ -17,5 +17,14 @@
  * @return {string}
  */
 const addBinary = function(a, b) {
+    // Convert a and b to decimal to perform adding of this two strings
+    const decimalA = Number.parseInt(a, 2);
+    const decimalB = Number.parseInt(b, 2);
 
+    const decimalSum = decimalA + decimalB;
+
+    return decimalSum.toString(2);
 };
+
+console.log(addBinary('11','1'));
+console.log(addBinary('1010','1011'));
