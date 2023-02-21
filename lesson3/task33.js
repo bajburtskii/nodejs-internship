@@ -23,4 +23,21 @@
  * @param {string} t
  * @return {boolean}
  */
-const isIsomorphic = function(s, t) {};
+const isIsomorphic = function(s, t) {
+    const map = new Map(); // To track items of array S as keys and items of array T as values
+    if (s.length !== t.length) return false;
+
+    for (let i = 0; i < s.length; i++) {
+        if (map.has(s.charAt(i))) {
+            if (map.get(s.charAt(i)) !== t.charAt(i)) return false;
+        } else {
+            map.set(s.charAt(i), t.charAt(i));
+        }
+    }
+    return true;
+};
+
+console.log(isIsomorphic('egg', 'add')); // Output: true
+console.log(isIsomorphic('foo', 'bar')); // Output: false
+console.log(isIsomorphic('paper', 'title')); // Output: true
+console.log(isIsomorphic('p3aper', 'title')); // Output: false
