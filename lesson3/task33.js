@@ -25,10 +25,8 @@
  */
 const isIsomorphic = function (s, t) {
     // if diff size then isn't isomorphic
-    if (s.length !== t.length) {
-        console.error("Error: s.length !== t.length");
+    if (s.length !== t.length)
         return false;
-    }
 
     // saving symbols in dict
     let dict = {};
