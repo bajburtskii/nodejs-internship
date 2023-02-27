@@ -24,6 +24,34 @@
  * @param {string} s
  * @return {boolean}
  */
-const isValid = function(s) {
+let symbol = "(){}[]";
+let symbol1 = "()"
+let symbol2 = "(]"
 
+const isValid = function(s) {
+    const leftSymbols = [];
+
+    for (let i = 0; i < s.length; i++) {
+
+        if (s[i] === '(' || s[i] === '{' || s[i] === '[') {
+            leftSymbols.push(s[i]);
+        }
+
+        else if (s[i] === ')' && leftSymbols.length !== 0 && leftSymbols[leftSymbols.length - 1] === '(') {
+            leftSymbols.pop();
+        } else if (s[i] === '}' && leftSymbols.length !== 0 && leftSymbols[leftSymbols.length - 1] === '{') {
+            leftSymbols.pop();
+        } else if (s[i] === ']' && leftSymbols.length !== 0 && leftSymbols[leftSymbols.length - 1] === '[') {
+            leftSymbols.pop();
+        }
+
+        else {
+            return false;
+        }
+    }
+    return leftSymbols.length === 0;
 };
+
+console.log(isValid(symbol));
+console.log(isValid(symbol1));
+console.log(isValid(symbol2));
