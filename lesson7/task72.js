@@ -15,6 +15,15 @@
  * @param {number} num
  * @return {number}
  */
-const addDigits = function(num) {
 
+let num = 38;
+const addDigits = function(num) {
+    while (num > 9) {
+        num = num.toString().split("").reduce((previousValue, currentValue, currentIndex) => {
+                    return  parseInt( previousValue) + parseInt(currentValue);
+        })
+    }
+    return num;
 };
+
+console.log(addDigits(num));
