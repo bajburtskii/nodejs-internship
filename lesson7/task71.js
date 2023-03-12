@@ -34,6 +34,33 @@
  * @param {number} n
  * @return {number[][]}
  */
-const combinationSum3 = function(k, n) {
+let k = 3;
+let n = 7;
 
+let k1 = 3;
+let n1 = 9;
+
+let k2 = 4;
+let n2 = 1;
+const combinationSum3 = function(k, n) {
+    let comb = [];
+    let resault = [],
+        dfs = (num, curSum) => {
+        if (comb.length === k) {
+            curSum === n && resault.push([...comb]);
+            return;
+        }
+        if (curSum >= n) return;
+        for (let i = num; i < 10; i++) {
+            comb.push(i);
+            dfs(i + 1, curSum + i);
+            comb.pop();
+        }
+    };
+    dfs(1, 0);
+    return resault;
 };
+
+console.log(combinationSum3(k,n))
+console.log(combinationSum3(k1,n1))
+console.log(combinationSum3(k2,n2))
