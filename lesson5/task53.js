@@ -23,5 +23,34 @@
  * @return {number}
  */
 const missingNumber = function(nums) {
-
+    const n = nums.length;
+    let expectedSum = (n * (n + 1)) / 2;
+    let actualSum = 0;
+    for (let i = 0; i < n; i++) {
+        actualSum += nums[i];
+    }
+    // By subtracting actualSum from expectedSum we can find the missing number
+    return expectedSum - actualSum;
 };
+console.log(missingNumber([3,0,1]));
+console.log(missingNumber([0,1]));
+console.log(missingNumber([9,6,4,2,3,5,7,0,1]));
+
+// Solution using Set
+const missingNumberSet = function(nums) {
+    let set = new Set();
+    const n = nums.length;
+
+    for (let i = 0; i < n; i++) {
+        set.add(nums[i]);
+    }
+
+    for (let i = 0; i <= n + 1; i++) {
+        if (!set.has(i)) {
+            return i;
+        }
+    }
+};
+console.log(missingNumberSet([3,0,1]));
+console.log(missingNumberSet([0,1]));
+console.log(missingNumberSet([9,6,4,2,3,5,7,0,1]));
