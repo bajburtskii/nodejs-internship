@@ -21,6 +21,36 @@
  * @param {string[]} words
  * @return {number}
  */
-const maxProduct = function(words) {
 
+let words = ["abcw","baz","foo","bar","xtfn","abcdef"];
+
+let words1 = ["a","ab","abc","d","cd","bcd","abcd"];
+
+let words2 = ["a","aa","aaa","aaaa"]
+const maxProduct = function(words) {
+    getMaxSum = (wordOne, wordTwo) => {
+        if (wordOne.length > wordTwo.length)
+            [wordOne, wordTwo] = [wordTwo, wordOne];
+        let length = wordOne.length * wordTwo.length;
+        for (let i = 0; i < wordOne.length; i++) {
+            if (wordTwo.includes(wordOne[i])) {
+                length = 0;
+                break;
+            }
+        }
+        return length;
+    };
+
+    let currentMax = 0;
+    let totalMax = 0;
+    for (let i = 0; i < words.length - 2; i++) {
+        for (let j = i + 1; j < words.length; j++) {
+            totalMax = Math.max(getMaxSum(words[i], words[j]), totalMax);
+        }
+    }
+    return totalMax;
 };
+
+console.log("Words strok number one = " + maxProduct(words))
+console.log("Words strok number two = " + maxProduct(words1))
+console.log("Words strok number three = " + maxProduct(words2))
